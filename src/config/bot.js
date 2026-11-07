@@ -62,8 +62,8 @@ export const botConfig = {
     // Default questions shown when someone fills out an application.
     defaultQuestions: [
       { question: "What is your name?", required: true },
-      { question: "How old are you?", required: true },
-      { question: "Why do you want to join?", required: true },
+      { question: "Whos youre favorite toon?", required: true },
+      { question: "What trinket is youre favorite?", required: true },
     ],
 
     // Embed colors by application status.
@@ -77,13 +77,13 @@ export const botConfig = {
     applicationCooldown: 24,
 
     // Auto-delete denied applications after this many days.
-    deleteDeniedAfter: 7,
+    deleteDeniedAfter: 2,
 
     // Auto-delete approved applications after this many days.
     deleteApprovedAfter: 30,
 
     // Role IDs allowed to manage applications.
-    managerRoles: [], // Will be populated from environment or database
+    managerRoles: [1568466404427038730], // Will be populated from environment or database
   },
 
   // =========================
@@ -217,7 +217,7 @@ export const botConfig = {
     defaultCategory: null,
 
     // Role IDs allowed to manage/support tickets.
-    supportRoles: [],
+    supportRoles: [1568466404427038730],
 
     // Priority options users/staff can assign.
     priorities: {
@@ -277,10 +277,10 @@ export const botConfig = {
     maximumDuration: 2592000000,
 
     // Role IDs allowed to host giveaways.
-    allowedRoles: [],
+    allowedRoles: [1568466404427038730],
 
     // Role IDs that bypass giveaway restrictions.
-    bypassRoles: [],
+    bypassRoles: [1568466404427038730],
   },
 
   // =========================
@@ -291,10 +291,10 @@ export const botConfig = {
     defaultRole: null,
 
     // Channel ID where birthday announcements are posted.
-    announcementChannel: null,
+    announcementChannel: 795144908977471511,
 
     // Timezone used to calculate birthday dates.
-    timezone: "UTC",
+    timezone: "EST",
   },
 
   // =========================
@@ -449,7 +449,7 @@ export const botConfig = {
   // Set any feature to `false` to disable it globally.
   features: {
     // Core systems.
-    economy: true,
+    economy: false,
     leveling: true,
     moderation: true,
     logging: true,
@@ -457,9 +457,9 @@ export const botConfig = {
 
     // Community engagement systems.
     tickets: true,
-    giveaways: true,
-    birthday: true,
-    counter: true,
+    giveaways: false,
+    birthday: false,
+    counter: false,
 
     // Security and self-service systems.
     verification: true,
